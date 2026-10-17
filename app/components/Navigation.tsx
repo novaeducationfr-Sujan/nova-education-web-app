@@ -33,18 +33,18 @@ export default function Navigation() {
       >
         <Link href="/" className="flex items-center gap-3">
           <Image
-            src="/images/nova-logo.jpeg"
-            alt="NOVA EDUCATION logo"
+            src="/images/pathora-logo.png"
+            alt="PATHORA EDUCATION logo"
             width={80}
             height={80}
           />
 
           <div>
             <p className="text-base font-extrabold tracking-wide text-[#052f63] sm:text-lg">
-              NOVA EDUCATION
+              PATHORA EDUCATION
             </p>
-            <p className="text-[11px] font-medium text-[#b7800b] sm:text-xs">
-              Your gateway to everywhere
+            <p className="text-[11px] font-medium text-[#e69c1d] sm:text-xs">
+              Connecting Dreams to Destinations
             </p>
           </div>
         </Link>
@@ -56,8 +56,8 @@ export default function Navigation() {
               href={link.href}
               className={`border-b-2 px-1 py-2 text-sm font-semibold transition-colors ${
                 isActive(link.href)
-                  ? "border-[#d9a321] text-[#052f63]"
-                  : "border-transparent text-slate-700 hover:border-[#d9a321] hover:text-[#052f63]"
+                  ? "border-[#e69c1d] text-[#052f63]"
+                  : "border-transparent text-slate-700 hover:border-[#e69c1d] hover:text-[#052f63]"
               }`}
             >
               {link.label}
@@ -110,7 +110,7 @@ export default function Navigation() {
                 className={`rounded-lg px-3 py-3 font-semibold ${
                   isActive(link.href)
                     ? "bg-[#052f63]/5 text-[#052f63]"
-                    : "text-slate-700 hover:bg-slate-50 hover:text-[#d9a321]"
+                    : "text-slate-700 hover:bg-slate-50 hover:text-[#e69c1d]"
                 }`}
               >
                 {link.label}

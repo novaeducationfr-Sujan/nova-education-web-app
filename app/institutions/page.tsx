@@ -5,7 +5,7 @@ import PageHeader from "../components/PageHeader";
 export const metadata: Metadata = {
   title: "Educational Partners",
   description:
-    "Discover how NOVA EDUCATION works with institutions and education-sector partners.",
+    "Discover how PATHORA EDUCATION works with institutions and education-sector partners.",
 };
 
 const partnerServices = [
@@ -25,13 +25,13 @@ export default function InstitutionsPage() {
       <PageHeader
         eyebrow="Educational Partners"
         title="Connecting educational institutions with international students"
-        description="NOVA EDUCATION works with educational institutions and education-sector partners interested in international student engagement, programme visibility and student orientation."
+        description="PATHORA EDUCATION works with educational institutions and education-sector partners interested in international student engagement, programme visibility and student orientation."
       />
 
       <section className="bg-white px-5 py-20 lg:px-8">
         <div className="mx-auto grid max-w-7xl gap-14 lg:grid-cols-2">
           <div>
-            <p className="font-bold uppercase tracking-[0.2em] text-[#b7800b]">
+            <p className="font-bold uppercase tracking-[0.2em] text-[#e69c1d]">
               Partnership Support
             </p>
 
@@ -53,7 +53,7 @@ export default function InstitutionsPage() {
                 key={service}
                 className="flex items-start gap-4 rounded-2xl border border-slate-200 bg-slate-50 p-5"
               >
-                <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#d9a321] text-sm font-bold text-[#031f42]">
+                <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#e69c1d] text-sm font-bold text-[#031f42]">
                   ✓
                 </span>
 
@@ -68,7 +68,7 @@ export default function InstitutionsPage() {
         <div className="mx-auto flex max-w-7xl flex-col justify-between gap-8 lg:flex-row lg:items-center">
           <div>
             <h2 className="text-3xl font-extrabold">
-              Interested in working with NOVA EDUCATION?
+              Interested in working with PATHORA EDUCATION?
             </h2>
 
             <p className="mt-3 max-w-2xl text-slate-200">

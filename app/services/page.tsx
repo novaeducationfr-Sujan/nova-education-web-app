@@ -5,7 +5,7 @@ import PageHeader from "../components/PageHeader";
 export const metadata: Metadata = {
   title: "Services",
   description:
-    "Explore educational counselling, application assistance and student support services from NOVA EDUCATION.",
+    "Explore educational counselling, application assistance and student support services from PATHORA EDUCATION.",
 };
 
 const services = [
@@ -170,7 +170,7 @@ export default function ServicesPage() {
               className="grid gap-8 rounded-3xl border border-slate-200 bg-white p-7 shadow-sm md:p-10 lg:grid-cols-[120px_1fr]"
             >
               <div>
-                <span className="text-4xl font-extrabold text-[#d9a321]">
+                <span className="text-4xl font-extrabold text-[#e69c1d]">
                   {service.number}
                 </span>
               </div>
@@ -190,7 +190,7 @@ export default function ServicesPage() {
                       key={item}
                       className="flex items-start gap-3 text-slate-700"
                     >
-                      <span className="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#d9a321] text-xs font-bold text-[#031f42]">
+                      <span className="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#e69c1d] text-xs font-bold text-[#031f42]">
                         ✓
                       </span>
 
@@ -205,17 +205,17 @@ export default function ServicesPage() {
       </section>
 
       <section className="bg-[#fffaf0] px-5 py-14 lg:px-8">
-        <div className="mx-auto max-w-5xl rounded-3xl border border-[#d9a321]/30 bg-white p-8 text-center shadow-sm md:p-12">
+        <div className="mx-auto max-w-5xl rounded-3xl border border-[#e69c1d]/30 bg-white p-8 text-center shadow-sm md:p-12">
           <h2 className="text-2xl font-extrabold text-[#052f63]">
             Important information
           </h2>
 
           <p className="mx-auto mt-5 max-w-3xl leading-7 text-slate-600">
-            NOVA EDUCATION provides educational consultancy, general information
-            and administrative assistance. We do not provide legal advice or
-            legal representation, and we do not guarantee admission, visa
-            approval, residence permit approval, employment, internships or any
-            particular academic or professional outcome.
+            PATHORA EDUCATION provides educational consultancy, general
+            information and administrative assistance. We do not provide legal
+            advice or legal representation, and we do not guarantee admission,
+            visa approval, residence permit approval, employment, internships or
+            any particular academic or professional outcome.
           </p>
           <div className="mt-6 text-center text-sm text-slate-500">
             <Link

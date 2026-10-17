@@ -3,12 +3,12 @@
 :root {
     --background: #ffffff;
     --foreground: #0b1f3a;
-    --nova-navy: #052f63;
-    --nova-navy-dark: #031f42;
-    --nova-gold: #d9a321;
-    --nova-gold-light: #f4cf68;
-    --nova-cream: #fffaf0;
-    --nova-gray: #5f6b7a;
+    --pathora-navy: #052f63;
+    --pathora-navy-dark: #031f42;
+    --pathora-gold: #e69c1d;
+    --pathora-gold-light: #e8a64a;
+    --pathora-cream: #fffaf0;
+    --pathora-gray: #5f6b7a;
 }
 
 * {
@@ -35,6 +35,6 @@ button {
 }
 
 ::selection {
-    background: var(--nova-gold);
-    color: var(--nova-navy-dark);
+    background: var(--pathora-gold);
+    color: var(--pathora-navy-dark);
 }

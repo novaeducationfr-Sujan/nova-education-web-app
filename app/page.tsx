@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 
 const services = [
@@ -51,19 +50,24 @@ const steps = [
 export default function Home() {
   return (
     <>
-      <section className="relative overflow-hidden bg-[#052f63]">
-        <div className="absolute -right-40 -top-40 h-96 w-96 rounded-full bg-[#d9a321]/20" />
+      <section
+        className="relative min-h-170 bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: "url('/images/bg-hero-home.png')",
+        }}
+      >
+        <div className="absolute -right-40 -top-40 h-96 w-96 rounded-full bg-[#e69c1d]/20" />
         <div className="absolute -bottom-48 left-1/3 h-96 w-96 rounded-full bg-white/5" />
 
-        <div className="relative mx-auto grid min-h-170 max-w-7xl items-center gap-14 px-5 py-20 lg:grid-cols-2 lg:px-8">
+        <div className="relative mx-auto flex min-h-170 max-w-7xl items-center px-5 py-20 lg:px-8">
           <div>
-            <p className="inline-flex rounded-full border border-[#d9a321]/50 bg-[#d9a321]/10 px-4 py-2 text-sm font-semibold text-[#f4cf68]">
+            <p className="inline-flex rounded-full border border-[#e69c1d]/50 bg-[#e69c1d]/10 px-4 py-2 text-sm font-semibold text-[#e69c1d]">
               International Education Consultancy
             </p>
 
             <h1 className="mt-6 max-w-3xl text-4xl font-extrabold leading-tight text-white sm:text-5xl lg:text-6xl">
               Build your academic future{" "}
-              <span className="text-[#f4cf68]">in France</span>
+              <span className="text-[#e69c1d]">in France</span>
             </h1>
 
             <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-200">
@@ -73,14 +77,14 @@ export default function Home() {
 
             <div className="mt-9 flex flex-col gap-4 sm:flex-row">
               <Link
-                className="rounded-full bg-[#031f42] px-5 py-3 text-center font-bold text-white hover:bg-[#052f63]"
+                className="rounded-full bg-[#0c3567] px-5 py-3 text-center font-bold text-white hover:bg-[#e69c1d] hover:text-[#031f42]"
                 href="/contact"
               >
                 Contact Us
               </Link>
 
               <Link
-                className="rounded-full bg-[#d9a321] px-5 py-3 text-center font-bold text-[#031f42] hover:bg-[#052f63]"
+                className="rounded-full bg-[#e69c1d] px-5 py-3 text-center font-bold text-[#031f42] hover:bg-[#0c3567] hover:text-white"
                 href="/services"
               >
                 Explore Our Services
@@ -89,38 +93,26 @@ export default function Home() {
 
             <ul className="mt-10 space-y-3 text-sm text-slate-200">
               <li className="flex items-center gap-3">
-                <span className="flex h-6 w-6 items-center justify-center rounded-full bg-[#d9a321] font-bold text-[#031f42]">
+                <span className="flex h-6 w-6 items-center justify-center rounded-full bg-[#e69c1d] font-bold text-[#031f42]">
                   ✓
                 </span>
                 Personalised educational guidance
               </li>
 
               <li className="flex items-center gap-3">
-                <span className="flex h-6 w-6 items-center justify-center rounded-full bg-[#d9a321] font-bold text-[#031f42]">
+                <span className="flex h-6 w-6 items-center justify-center rounded-full bg-[#e69c1d] font-bold text-[#031f42]">
                   ✓
                 </span>
                 Application and document assistance
               </li>
 
               <li className="flex items-center gap-3">
-                <span className="flex h-6 w-6 items-center justify-center rounded-full bg-[#d9a321] font-bold text-[#031f42]">
+                <span className="flex h-6 w-6 items-center justify-center rounded-full bg-[#e69c1d] font-bold text-[#031f42]">
                   ✓
                 </span>
                 Support before and after arrival
               </li>
             </ul>
-          </div>
-
-          <div className="flex justify-center lg:justify-end">
-            <div className="relative overflow-hidden rounded-4xl border border-white/20 bg-white p-2 shadow-2xl">
-              <Image
-                src="/images/hero-education.jpeg"
-                alt="Students preparing for their studies in France"
-                width={600}
-                height={400}
-                className="rounded-4xl object-cover"
-              />
-            </div>
           </div>
         </div>
       </section>
@@ -128,8 +120,8 @@ export default function Home() {
       <section className="bg-white px-5 py-20 lg:px-8">
         <div className="mx-auto grid max-w-7xl items-center gap-14 lg:grid-cols-2">
           <div>
-            <p className="font-bold uppercase tracking-[0.2em] text-[#b7800b]">
-              Welcome to NOVA EDUCATION
+            <p className="font-bold uppercase tracking-[0.2em] text-[#e69c1d]">
+              Welcome to PATHORA EDUCATION
             </p>
 
             <h2 className="mt-4 text-3xl font-extrabold leading-tight text-[#052f63] sm:text-4xl">
@@ -159,7 +151,7 @@ export default function Home() {
       <section className="bg-slate-50 px-5 py-20 lg:px-8">
         <div className="mx-auto max-w-7xl">
           <div className="mx-auto max-w-3xl text-center">
-            <p className="font-bold uppercase tracking-[0.2em] text-[#b7800b]">
+            <p className="font-bold uppercase tracking-[0.2em] text-[#e69c1d]">
               Our Services
             </p>
 
@@ -179,7 +171,7 @@ export default function Home() {
                 key={service.title}
                 className="rounded-2xl border border-slate-200 bg-white p-7 shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
               >
-                <span className="text-sm font-extrabold text-[#d9a321]">
+                <span className="text-sm font-extrabold text-[#e69c1d]">
                   {service.number}
                 </span>
 
@@ -195,7 +187,12 @@ export default function Home() {
           </div>
 
           <div className="mt-12 text-center">
-            <Link href="/services">View All Services</Link>
+            <Link
+              href="/services"
+              className="inline-flex items-center justify-center rounded-full bg-[#031f42] px-6 py-3 text-sm font-bold text-white transition hover:bg-[#052f63]"
+            >
+              View All Services
+            </Link>
           </div>
         </div>
       </section>
@@ -203,7 +200,7 @@ export default function Home() {
       <section className="bg-white px-5 py-20 lg:px-8">
         <div className="mx-auto grid max-w-7xl gap-14 lg:grid-cols-2">
           <div>
-            <p className="font-bold uppercase tracking-[0.2em] text-[#b7800b]">
+            <p className="font-bold uppercase tracking-[0.2em] text-[#e69c1d]">
               Personalised Approach
             </p>
 
@@ -216,8 +213,14 @@ export default function Home() {
               are unique. Our approach begins by understanding your profile and
               helping you explore options that correspond to your future goals.
             </p>
-
-            <Link href="/">Tell Us About Your Project</Link>
+            <div className="mt-8">
+              <Link
+                href="/contact"
+                className="inline-flex rounded-full bg-[#031f42] px-5 py-3 text-center font-bold text-white transition hover:bg-[#052f63]"
+              >
+                Tell Us About Your Project
+              </Link>
+            </div>
           </div>
 
           <div className="space-y-4">
@@ -237,7 +240,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-[#d9a321] px-5 py-16 lg:px-8">
+      <section className="bg-[#e69c1d] px-5 py-16 lg:px-8">
         <div className="mx-auto flex max-w-7xl flex-col items-start justify-between gap-8 lg:flex-row lg:items-center">
           <div>
             <h2 className="text-3xl font-extrabold text-[#031f42]">

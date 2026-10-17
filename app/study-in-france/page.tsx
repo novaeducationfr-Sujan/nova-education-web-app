@@ -56,7 +56,7 @@ export default function StudyInFrancePage() {
       <section className="bg-white px-5 py-20 lg:px-8">
         <div className="mx-auto grid max-w-7xl gap-14 lg:grid-cols-2">
           <div>
-            <p className="font-bold uppercase tracking-[0.2em] text-[#b7800b]">
+            <p className="font-bold uppercase tracking-[0.2em] text-[#e69c1d]">
               Study Opportunities
             </p>
 
@@ -77,7 +77,7 @@ export default function StudyInFrancePage() {
                 key={field}
                 className="flex items-center gap-3 rounded-xl border border-slate-200 bg-slate-50 p-4 font-semibold text-slate-700"
               >
-                <span className="h-2.5 w-2.5 rounded-full bg-[#d9a321]" />
+                <span className="h-2.5 w-2.5 rounded-full bg-[#e69c1d]" />
                 {field}
               </div>
             ))}
@@ -88,7 +88,7 @@ export default function StudyInFrancePage() {
       <section className="bg-slate-50 px-5 py-20 lg:px-8">
         <div className="mx-auto max-w-7xl">
           <div className="mx-auto max-w-3xl text-center">
-            <p className="font-bold uppercase tracking-[0.2em] text-[#b7800b]">
+            <p className="font-bold uppercase tracking-[0.2em] text-[#e69c1d]">
               Types of Institutions
             </p>
 
@@ -119,7 +119,7 @@ export default function StudyInFrancePage() {
       <section className="bg-white px-5 py-20 lg:px-8">
         <div className="mx-auto max-w-7xl">
           <div className="rounded-3xl bg-[#052f63] p-8 text-white md:p-12">
-            <p className="font-bold uppercase tracking-[0.2em] text-[#f4cf68]">
+            <p className="font-bold uppercase tracking-[0.2em] text-[#e69c1d]">
               Degree Structure
             </p>
 
@@ -129,19 +129,19 @@ export default function StudyInFrancePage() {
 
             <div className="mt-10 grid gap-6 md:grid-cols-3">
               <div className="rounded-2xl bg-white/10 p-6">
-                <p className="text-2xl font-extrabold text-[#f4cf68]">
+                <p className="text-2xl font-extrabold text-[#e69c1d]">
                   Licence
                 </p>
                 <p className="mt-2 text-slate-200">Bachelor&apos;s level</p>
               </div>
 
               <div className="rounded-2xl bg-white/10 p-6">
-                <p className="text-2xl font-extrabold text-[#f4cf68]">Master</p>
+                <p className="text-2xl font-extrabold text-[#e69c1d]">Master</p>
                 <p className="mt-2 text-slate-200">Master&apos;s level</p>
               </div>
 
               <div className="rounded-2xl bg-white/10 p-6">
-                <p className="text-2xl font-extrabold text-[#f4cf68]">
+                <p className="text-2xl font-extrabold text-[#e69c1d]">
                   Doctorat
                 </p>
                 <p className="mt-2 text-slate-200">Doctoral level</p>
@@ -149,7 +149,7 @@ export default function StudyInFrancePage() {
             </div>
           </div>
 
-          <div className="mt-12 rounded-2xl border border-[#d9a321]/30 bg-[#fffaf0] p-7">
+          <div className="mt-12 rounded-2xl border border-[#e69c1d]/30 bg-[#fffaf0] p-7">
             <h2 className="text-xl font-bold text-[#052f63]">
               Application procedures
             </h2>

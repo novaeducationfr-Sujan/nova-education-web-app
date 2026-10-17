@@ -25,27 +25,13 @@ export default function ContactPage() {
             <h2 className="text-2xl font-extrabold">Contact information</h2>
 
             <p className="mt-4 leading-7 text-slate-200">
-              Contact NOVA EDUCATION for information about educational
+              Contact PATHORA EDUCATION for information about educational
               counselling, applications and administrative support.
             </p>
 
             <div className="mt-9 space-y-7">
               <div>
-                <p className="text-sm font-bold uppercase tracking-wider text-[#f4cf68]">
-                  Address
-                </p>
-
-                <p className="mt-2 leading-7 text-slate-200">
-                  41 Rue du Petit Bois
-                  <br />
-                  94000 Créteil
-                  <br />
-                  France
-                </p>
-              </div>
-
-              <div>
-                <p className="text-sm font-bold uppercase tracking-wider text-[#f4cf68]">
+                <p className="text-sm font-bold uppercase tracking-wider text-[#e69c1d]">
                   Phone / WhatsApp
                 </p>
 
@@ -58,15 +44,15 @@ export default function ContactPage() {
               </div>
 
               <div>
-                <p className="text-sm font-bold uppercase tracking-wider text-[#f4cf68]">
+                <p className="text-sm font-bold uppercase tracking-wider text-[#e69c1d]">
                   Email
                 </p>
 
                 <a
-                  href="mailto:contact@nova-education.fr"
+                  href="mailto:contact@pathoraeducation.com"
                   className="mt-2 block leading-7 text-slate-200 transition hover:text-white"
                 >
-                  contact@nova-education.fr
+                  contact@pathoraeducation.com
                 </a>
               </div>
             </div>
@@ -86,7 +72,7 @@ export default function ContactPage() {
               <div className="mt-8 rounded-2xl border border-green-200 bg-green-50 p-6 text-green-800">
                 Thank you. Your form has been completed. The form must now be
                 connected to an email or form-processing service before it can
-                send information to NOVA EDUCATION.
+                send information to PATHORA EDUCATION.
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="mt-8 space-y-6">

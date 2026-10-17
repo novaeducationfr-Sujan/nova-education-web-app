@@ -5,7 +5,7 @@ import PageHeader from "../components/PageHeader";
 export const metadata: Metadata = {
   title: "About Us",
   description:
-    "Learn about the mission and personalised approach of NOVA EDUCATION.",
+    "Learn about the mission and personalised approach of PATHORA EDUCATION.",
 };
 
 const values = [
@@ -37,13 +37,13 @@ export default function AboutPage() {
       <PageHeader
         eyebrow="About Us"
         title="Supporting international students throughout their journey in France"
-        description="NOVA EDUCATION provides personalised educational guidance and practical administrative support for students planning to study or continue their education in France."
+        description="PATHORA EDUCATION provides personalised educational guidance and practical administrative support for students planning to study or continue their education in France."
       />
 
       <section className="bg-white px-5 py-20 lg:px-8">
         <div className="mx-auto grid max-w-7xl gap-14 lg:grid-cols-2">
           <div>
-            <p className="font-bold uppercase tracking-[0.2em] text-[#b7800b]">
+            <p className="font-bold uppercase tracking-[0.2em] text-[#e69c1d]">
               Our Mission
             </p>
 
@@ -79,7 +79,7 @@ export default function AboutPage() {
       <section className="bg-slate-50 px-5 py-20 lg:px-8">
         <div className="mx-auto max-w-7xl">
           <div className="max-w-3xl">
-            <p className="font-bold uppercase tracking-[0.2em] text-[#b7800b]">
+            <p className="font-bold uppercase tracking-[0.2em] text-[#e69c1d]">
               Our Approach
             </p>
 
@@ -101,7 +101,7 @@ export default function AboutPage() {
                 key={value.title}
                 className="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm"
               >
-                <div className="mb-5 h-1 w-14 rounded-full bg-[#d9a321]" />
+                <div className="mb-5 h-1 w-14 rounded-full bg-[#e69c1d]" />
 
                 <h3 className="text-xl font-bold text-[#052f63]">
                   {value.title}

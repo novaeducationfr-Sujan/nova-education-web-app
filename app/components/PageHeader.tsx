@@ -11,11 +11,11 @@ export default function PageHeader({
 }: PageHeaderProps) {
   return (
     <section className="relative overflow-hidden bg-[#052f63] px-5 py-20 text-white lg:px-8">
-      <div className="absolute -right-32 -top-32 h-80 w-80 rounded-full bg-[#d9a321]/20" />
+      <div className="absolute -right-32 -top-32 h-80 w-80 rounded-full bg-[#e69c1d]/20" />
       <div className="absolute -bottom-40 left-1/4 h-80 w-80 rounded-full bg-white/5" />
 
       <div className="relative mx-auto max-w-7xl">
-        <p className="font-bold uppercase tracking-[0.2em] text-[#f4cf68]">
+        <p className="font-bold uppercase tracking-[0.2em] text-[#e69c1d]">
           {eyebrow}
         </p>
 

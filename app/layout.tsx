@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Footer from "./components/Footer";
 import Navigation from "./components/Navigation";
+import WhatsAppButton from "./components/WhatsAppButton";
 import "./globals.css";
 
 const inter = Inter({
@@ -10,8 +11,8 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "NOVA EDUCATION | Study in France",
-    template: "%s | NOVA EDUCATION",
+    default: "PATHORA EDUCATION | Study in France",
+    template: "%s | PATHORA EDUCATION",
   },
   description:
     "Personalised educational guidance, application assistance and administrative support for international students in France.",
@@ -28,6 +29,7 @@ export default function RootLayout({
         <Navigation />
         <main>{children}</main>
         <Footer />
+        <WhatsAppButton />
       </body>
     </html>
   );

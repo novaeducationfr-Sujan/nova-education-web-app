@@ -11,16 +11,16 @@ export default function Footer() {
             <div className="flex items-center gap-3 mb-4">
               <div className="relative h-12 w-12 overflow-hidden rounded-full bg-white/10">
                 <Image
-                  src="/images/nova-logo.jpeg"
-                  alt="NOVA EDUCATION logo"
+                  src="/images/pathora-logo.png"
+                  alt="PATHORA EDUCATION logo"
                   fill
                   className="object-cover"
                 />
               </div>
               <div>
-                <h3 className="font-bold text-lg">NOVA EDUCATION</h3>
+                <h3 className="font-bold text-lg">PATHORA EDUCATION</h3>
                 <p className="text-sm text-slate-300">
-                  Your gateway to everywhere
+                  Connecting Dreams to Destinations
                 </p>
               </div>
             </div>
@@ -64,7 +64,14 @@ export default function Footer() {
             <h4 className="font-bold mb-4">Contact</h4>
 
             <div className="space-y-3 text-slate-300 text-sm">
-              <p>📍 Créteil, France</p>
+              <p>
+                <a
+                  href="mailto:contact@pathoraeducation.fr"
+                  className="hover:text-white transition-colors"
+                >
+                  ✉️ contact@pathoraeducation.com
+                </a>
+              </p>
               <p>
                 <a
                   href="tel:+33660294156"
@@ -73,21 +80,13 @@ export default function Footer() {
                   📞 +33 6 60 29 41 56
                 </a>
               </p>
-              <p>
-                <a
-                  href="mailto:contact@novaeducation.fr"
-                  className="hover:text-white transition-colors"
-                >
-                  ✉️ contact@novaeducation.fr
-                </a>
-              </p>
             </div>
           </div>
         </div>
 
         <div className="border-t border-slate-700 mt-12 pt-6 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-sm text-slate-400">
-            © 2026 NOVA EDUCATION. All rights reserved.
+            © 2026 PATHORA EDUCATION. All rights reserved.
           </p>
 
           <div className="flex gap-5 text-sm text-slate-400">

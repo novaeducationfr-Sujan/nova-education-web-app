@@ -11,7 +11,7 @@ export default function LegalNoticePage() {
       <PageHeader
         eyebrow="Legal Information"
         title="Legal Notice"
-        description="Information concerning the publisher, activity, hosting and intellectual property of the NOVA EDUCATION website."
+        description="Information concerning the publisher, activity, hosting and intellectual property of the PATHORA EDUCATION website."
       />
 
       <section className="bg-white px-5 py-20 lg:px-8">
@@ -22,13 +22,13 @@ export default function LegalNoticePage() {
             </h2>
 
             <div className="mt-4">
-              <p className="font-bold text-slate-800">NOVA EDUCATION</p>
+              <p className="font-bold text-slate-800">PATHORA EDUCATION</p>
               <p>Operated by Sujan Banjara, Entrepreneur Individuel (EI)</p>
               <p>41 Rue du Petit Bois</p>
               <p>94000 Créteil, France</p>
               <p className="mt-3">SIREN: 130 509 557</p>
               <p>SIRET: 13050955700018</p>
-              <p>Email: YOUR_PROFESSIONAL_EMAIL</p>
+              <p>Email: contact@pathoraeducation.com</p>
               <p>Phone: +33 6 60 29 41 56</p>
             </div>
           </section>
@@ -37,7 +37,7 @@ export default function LegalNoticePage() {
             <h2 className="text-2xl font-extrabold text-[#052f63]">Activity</h2>
 
             <p className="mt-4">
-              NOVA EDUCATION provides international education consultancy,
+              PATHORA EDUCATION provides international education consultancy,
               student orientation, application assistance and administrative
               support for students wishing to study or continue their studies in
               France.

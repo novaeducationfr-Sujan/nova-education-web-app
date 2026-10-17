@@ -31,7 +31,7 @@ export default function PrivacyPolicyPage() {
       <PageHeader
         eyebrow="Personal Data"
         title="Privacy Policy"
-        description="This policy explains the types of personal information NOVA EDUCATION may collect and how that information may be used."
+        description="This policy explains the types of personal information PATHORA EDUCATION may collect and how that information may be used."
       />
 
       <section className="bg-white px-5 py-20 lg:px-8">
@@ -42,12 +42,12 @@ export default function PrivacyPolicyPage() {
             </h2>
 
             <p className="mt-4">
-              This website is operated by NOVA EDUCATION, operated by Sujan
+              This website is operated by PATHORA EDUCATION, operated by Sujan
               Banjara, Entrepreneur Individuel (EI), 41 Rue du Petit Bois, 94000
               Créteil, France.
             </p>
 
-            <p className="mt-3">Email: YOUR_PROFESSIONAL_EMAIL</p>
+            <p className="mt-3">Email: contact@pathoraeducation.com</p>
           </section>
 
           <section>
@@ -58,7 +58,7 @@ export default function PrivacyPolicyPage() {
             <ul className="mt-4 space-y-2">
               {collectedInformation.map((item) => (
                 <li key={item} className="flex gap-3">
-                  <span className="font-bold text-[#d9a321]">•</span>
+                  <span className="font-bold text-[#e69c1d]">•</span>
                   {item}
                 </li>
               ))}
@@ -73,7 +73,7 @@ export default function PrivacyPolicyPage() {
             <ul className="mt-4 space-y-2">
               {informationUses.map((item) => (
                 <li key={item} className="flex gap-3">
-                  <span className="font-bold text-[#d9a321]">•</span>
+                  <span className="font-bold text-[#e69c1d]">•</span>
                   {item}
                 </li>
               ))}
@@ -109,7 +109,7 @@ export default function PrivacyPolicyPage() {
             </p>
 
             <p className="mt-3">
-              To exercise your rights, contact: YOUR_PROFESSIONAL_EMAIL.
+              To exercise your rights, contact: contact@pathoraeducation.com.
             </p>
 
             <p className="mt-3">

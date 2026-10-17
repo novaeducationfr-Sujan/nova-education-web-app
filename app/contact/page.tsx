@@ -1,14 +1,51 @@
 "use client";
 
-import { FormEvent, useState } from "react";
+import { useState, type FormEvent } from "react";
 import PageHeader from "../components/PageHeader";
 
 export default function ContactPage() {
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
 
-  function handleSubmit(event: FormEvent<HTMLFormElement>) {
+  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    setSubmitted(true);
+
+    setLoading(true);
+    setError("");
+
+    const form = event.currentTarget;
+    const formData = new FormData(form);
+
+    formData.append("access_key", "c2ea6e14-05d1-4efb-8d95-d1bb8d43d826");
+    formData.append("subject", "New enquiry from PATHORA EDUCATION website");
+    formData.append("from_name", "PATHORA EDUCATION Website");
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData,
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        form.reset();
+        setSubmitted(true);
+      } else {
+        console.error("Web3Forms error:", data);
+
+        setError(data.message || "Something went wrong. Please try again.");
+      }
+    } catch (error) {
+      console.error("Contact form error:", error);
+
+      setError(
+        "We could not send your request. Please try again or contact us directly.",
+      );
+    } finally {
+      setLoading(false);
+    }
   }
 
   return (
@@ -42,7 +79,6 @@ export default function ContactPage() {
                   +33 6 60 29 41 56
                 </a>
               </div>
-
               <div>
                 <p className="text-sm font-bold uppercase tracking-wider text-[#e69c1d]">
                   Email
@@ -58,6 +94,7 @@ export default function ContactPage() {
             </div>
           </aside>
 
+          {/* Contact Form */}
           <div className="rounded-3xl border border-slate-200 bg-white p-7 shadow-sm md:p-10">
             <h2 className="text-2xl font-extrabold text-[#052f63]">
               Contact form
@@ -70,12 +107,33 @@ export default function ContactPage() {
 
             {submitted ? (
               <div className="mt-8 rounded-2xl border border-green-200 bg-green-50 p-6 text-green-800">
-                Thank you. Your form has been completed. The form must now be
-                connected to an email or form-processing service before it can
-                send information to PATHORA EDUCATION.
+                <h3 className="font-bold">
+                  Thank you for contacting PATHORA EDUCATION.
+                </h3>
+
+                <p className="mt-2 leading-7">
+                  Your request has been sent successfully. Our team will get
+                  back to you as soon as possible.
+                </p>
+
+                <button
+                  type="button"
+                  onClick={() => setSubmitted(false)}
+                  className="mt-5 font-semibold text-[#052f63] hover:underline"
+                >
+                  Send another request
+                </button>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="mt-8 space-y-6">
+                <input
+                  type="checkbox"
+                  name="botcheck"
+                  className="hidden"
+                  style={{ display: "none" }}
+                  tabIndex={-1}
+                  autoComplete="off"
+                />
                 <div className="grid gap-6 md:grid-cols-2">
                   <div>
                     <label
@@ -90,6 +148,8 @@ export default function ContactPage() {
                       name="firstName"
                       type="text"
                       required
+                      maxLength={50}
+                      autoComplete="given-name"
                       className="w-full rounded-xl border border-slate-300 px-4 py-3 outline-none focus:border-[#052f63] focus:ring-2 focus:ring-[#052f63]/10"
                     />
                   </div>
@@ -107,11 +167,12 @@ export default function ContactPage() {
                       name="lastName"
                       type="text"
                       required
+                      maxLength={50}
+                      autoComplete="family-name"
                       className="w-full rounded-xl border border-slate-300 px-4 py-3 outline-none focus:border-[#052f63] focus:ring-2 focus:ring-[#052f63]/10"
                     />
                   </div>
                 </div>
-
                 <div className="grid gap-6 md:grid-cols-2">
                   <div>
                     <label
@@ -126,6 +187,8 @@ export default function ContactPage() {
                       name="email"
                       type="email"
                       required
+                      maxLength={254}
+                      autoComplete="email"
                       className="w-full rounded-xl border border-slate-300 px-4 py-3 outline-none focus:border-[#052f63] focus:ring-2 focus:ring-[#052f63]/10"
                     />
                   </div>
@@ -142,11 +205,12 @@ export default function ContactPage() {
                       id="phone"
                       name="phone"
                       type="tel"
+                      maxLength={25}
+                      autoComplete="tel"
                       className="w-full rounded-xl border border-slate-300 px-4 py-3 outline-none focus:border-[#052f63] focus:ring-2 focus:ring-[#052f63]/10"
                     />
                   </div>
                 </div>
-
                 <div>
                   <label
                     htmlFor="country"
@@ -160,10 +224,11 @@ export default function ContactPage() {
                     name="country"
                     type="text"
                     required
+                    maxLength={60}
+                    autoComplete="country-name"
                     className="w-full rounded-xl border border-slate-300 px-4 py-3 outline-none focus:border-[#052f63] focus:ring-2 focus:ring-[#052f63]/10"
                   />
                 </div>
-
                 <div>
                   <label
                     htmlFor="service"
@@ -182,6 +247,7 @@ export default function ContactPage() {
                     <option value="" disabled>
                       Select a service
                     </option>
+
                     <option>Educational counselling</option>
                     <option>Programme selection</option>
                     <option>Application assistance</option>
@@ -194,7 +260,6 @@ export default function ContactPage() {
                     <option>Other</option>
                   </select>
                 </div>
-
                 <div>
                   <label
                     htmlFor="message"
@@ -208,28 +273,48 @@ export default function ContactPage() {
                     name="message"
                     rows={7}
                     required
+                    minLength={20}
+                    maxLength={2000}
                     className="w-full resize-y rounded-xl border border-slate-300 px-4 py-3 outline-none focus:border-[#052f63] focus:ring-2 focus:ring-[#052f63]/10"
                   />
+                  <p className="mt-2 text-right text-xs text-slate-400">
+                    Maximum 2000 characters
+                  </p>
                 </div>
-
                 <label className="flex items-start gap-3 text-sm leading-6 text-slate-600">
                   <input
                     type="checkbox"
+                    name="privacyConsent"
+                    value="Accepted"
                     required
                     className="mt-1 h-4 w-4 accent-[#052f63]"
                   />
 
                   <span>
                     I agree that the information provided may be used to respond
-                    to my enquiry in accordance with the Privacy Policy.
+                    to my enquiry in accordance with the{" "}
+                    <a
+                      href="/privacy-policy"
+                      className="text-blue-500 underline hover:text-blue-700"
+                    >
+                      Privacy Policy
+                    </a>
+                    .
                   </span>
                 </label>
 
+                {/* Error */}
+                {error && (
+                  <div className="rounded-xl border border-red-200 bg-red-50 p-4 text-sm text-red-700">
+                    {error}
+                  </div>
+                )}
                 <button
                   type="submit"
-                  className="rounded-full bg-[#052f63] px-8 py-3.5 font-bold text-white hover:bg-[#031f42]"
+                  disabled={loading}
+                  className="rounded-full bg-[#052f63] px-8 py-3.5 font-bold text-white transition hover:bg-[#031f42] disabled:cursor-not-allowed disabled:opacity-60"
                 >
-                  Send My Request
+                  {loading ? "Sending..." : "Send My Request"}
                 </button>
               </form>
             )}

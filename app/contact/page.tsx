@@ -57,7 +57,7 @@ export default function ContactPage() {
       />
 
       <section className="bg-slate-50 px-5 py-20 lg:px-8">
-        <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.8fr_1.2fr]">
+        <div className="mx-auto flex max-w-7xl flex-col gap-10">
           <aside className="rounded-3xl bg-[#052f63] p-8 text-white md:p-10">
             <h2 className="text-2xl font-extrabold">Contact information</h2>
 
@@ -69,18 +69,6 @@ export default function ContactPage() {
             <div className="mt-9 space-y-7">
               <div>
                 <p className="text-sm font-bold uppercase tracking-wider text-[#e69c1d]">
-                  Phone / WhatsApp
-                </p>
-
-                <a
-                  href="tel:+33660294156"
-                  className="mt-2 block leading-7 text-slate-200 transition hover:text-white"
-                >
-                  +33 6 60 29 41 56
-                </a>
-              </div>
-              <div>
-                <p className="text-sm font-bold uppercase tracking-wider text-[#e69c1d]">
                   Email
                 </p>
 
@@ -89,6 +77,18 @@ export default function ContactPage() {
                   className="mt-2 block leading-7 text-slate-200 transition hover:text-white"
                 >
                   contact@pathoraeducation.com
+                </a>
+              </div>
+              <div>
+                <p className="text-sm font-bold uppercase tracking-wider text-[#e69c1d]">
+                  Phone / WhatsApp
+                </p>
+
+                <a
+                  href="tel:+33660294156"
+                  className="mt-2 block leading-7 text-slate-200 transition hover:text-white"
+                >
+                  +33 6 60 29 41 56
                 </a>
               </div>
             </div>

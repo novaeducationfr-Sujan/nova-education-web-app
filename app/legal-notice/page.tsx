@@ -58,15 +58,6 @@ export default function LegalNoticePage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-extrabold text-[#052f63]">Hosting</h2>
-
-            <p className="mt-4">
-              Add the hosting company name, address and phone number here after
-              choosing the website hosting provider.
-            </p>
-          </section>
-
-          <section>
             <h2 className="text-2xl font-extrabold text-[#052f63]">
               Intellectual Property
             </h2>

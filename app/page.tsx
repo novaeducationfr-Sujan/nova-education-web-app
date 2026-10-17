@@ -56,9 +56,6 @@ export default function Home() {
           backgroundImage: "url('/images/bg-hero-home.png')",
         }}
       >
-        <div className="absolute -right-40 -top-40 h-96 w-96 rounded-full bg-[#e69c1d]/20" />
-        <div className="absolute -bottom-48 left-1/3 h-96 w-96 rounded-full bg-white/5" />
-
         <div className="relative mx-auto flex min-h-170 max-w-7xl items-center px-5 py-20 lg:px-8">
           <div>
             <p className="inline-flex rounded-full border border-[#e69c1d]/50 bg-[#e69c1d]/10 px-4 py-2 text-sm font-semibold text-[#e69c1d]">

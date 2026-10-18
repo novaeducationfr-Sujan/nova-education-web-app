@@ -1,3 +1,12 @@
+# Pathora Education
+
+## Deployment
+
+- Hosting and deployment: Vercel
+- Domain and DNS management: Hostinger
+- Contact form and email service: Web3Forms
+
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
